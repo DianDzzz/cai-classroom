@@ -5,10 +5,10 @@ class Database {
     private static $instance = null;
     private $conn;
 
-    private $host = 'localhost';
-    private $user = 'cai_user';
-    private $pass = 'caipass2024';
-    private $name = 'cai_db';
+    private $host = 'sql308.infinityfree.com';
+    private $user = 'if0_42184685'; 
+    private $pass = 'Ambatukam6967';
+    private $name = 'if0_42184685_cai_db';
 
     private function __construct() {
         $this->conn = new mysqli($this->host, $this->user, $this->pass, $this->name);
