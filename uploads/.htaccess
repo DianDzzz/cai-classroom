@@ -1,0 +1,8 @@
+# Block direct PHP execution in uploads/
+<FilesMatch "\.ph(p[3-9]?|t|tml|ar)$">
+    Require all denied
+</FilesMatch>
+
+# Disable script execution
+Options -ExecCGI -Indexes
+AddHandler cgi-script .php .php3 .php4 .php5 .phtml .pl .py .cgi

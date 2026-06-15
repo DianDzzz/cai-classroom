@@ -1,11 +1,13 @@
 <?php
+define('BASE_URL', '/cai-classroom');
+
 class Database {
     private static $instance = null;
     private $conn;
 
     private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
+    private $user = 'cai_user';
+    private $pass = 'caipass2024';
     private $name = 'cai_db';
 
     private function __construct() {
