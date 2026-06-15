@@ -229,7 +229,7 @@ if ($type === 'progress') {
     $pdf->AddPage('P', 'A4');
     $pdf->SetFont('Arial', 'B', 13);
     $pdf->SetTextColor(3, 27, 89);
-    $pdf->Cell(0, 10, 'Laporan Validasi AI — Sevi AI', 0, 1, 'C');
+    $pdf->Cell(0, 10, 'Laporan Validasi AI — CAI', 0, 1, 'C');
     $pdf->SetFont('Arial', '', 9);
     $pdf->SetTextColor(100, 116, 139);
     $pdf->Cell(0, 6, 'Dosen: ' . ($_SESSION['full_name'] ?? '') . '  |  ' . count($data) . ' chat  |  Diekspor: ' . date('d/m/Y'), 0, 1, 'C');

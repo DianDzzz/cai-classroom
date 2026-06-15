@@ -97,7 +97,7 @@ require_once __DIR__ . '/../includes/header.php';
           ['Mata Kuliah',       BASE_URL.'/dosen/kelola_mk.php',         'Tambah, edit, dan hapus mata kuliah'],
           ['Enrollment',        BASE_URL.'/dosen/kelola_enrollment.php', 'Daftarkan mahasiswa ke mata kuliah'],
           ['Kelola Materi',     BASE_URL.'/dosen/kelola_materi.php',     'Upload PDF, PPT, atau link per minggu'],
-          ['Validasi AI',       BASE_URL.'/dosen/validasi_ai.php',       "Verifikasi $s_unver jawaban Sevi AI yang belum ditinjau"],
+          ['Validasi AI',       BASE_URL.'/dosen/validasi_ai.php',       "Verifikasi $s_unver jawaban CAI yang belum ditinjau"],
           ['Input Nilai',       BASE_URL.'/dosen/input_nilai.php',       'Masukkan nilai akhir A–F untuk mahasiswa'],
           ['Kelola User',       BASE_URL.'/dosen/kelola_user.php',       'Aktivasi, edit, dan reset password mahasiswa'],
         ];
@@ -157,7 +157,7 @@ require_once __DIR__ . '/../includes/header.php';
             ['Akses Materi Perkuliahan',      '&#10003;','&#10003;','Mahasiswa yang terdaftar di MK'],
             ['Tandai Progres Belajar',        '&mdash;', '&#10003;','Hanya mahasiswa sendiri'],
             ['Lihat Progres Semua Mahasiswa', '&#10003;','&mdash;', 'Dosen untuk monitoring'],
-            ['Chat Sevi AI',                  '&mdash;', '&#10003;','Mahasiswa aktif yang login'],
+            ['Chat CAI',                  '&mdash;', '&#10003;','Mahasiswa aktif yang login'],
             ['Lihat Semua Chat History',      '&#10003;','&mdash;', 'Untuk keperluan validasi'],
             ['Validasi & Koreksi Jawaban AI', '&#10003;','&mdash;', 'Hak eksklusif dosen'],
             ['Feedback Thumbs Up/Down',       '&mdash;', '&#10003;','Mahasiswa memberi rating AI'],

@@ -44,5 +44,5 @@ function callGeminiAPI(string $system_prompt, string $user_message): string {
     }
 
     return $data['candidates'][0]['content']['parts'][0]['text']
-        ?? 'Sevi AI tidak dapat memproses pertanyaan ini saat ini.';
+        ?? 'CAI tidak dapat memproses pertanyaan ini saat ini.';
 }

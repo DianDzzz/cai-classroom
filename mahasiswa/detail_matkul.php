@@ -187,8 +187,8 @@ require_once __DIR__ . '/../includes/header.php';
 
 </div><!-- /container -->
 
-<!-- ── Sevi AI Chatbox ────────────────────────────────────── -->
-<button class="fab" onclick="toggleChat()" title="Tanya Sevi AI">
+<!-- ── CAI Chatbox ────────────────────────────────────── -->
+<button class="fab" onclick="toggleChat()" title="Tanya CAI">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
   </svg>
@@ -198,7 +198,7 @@ require_once __DIR__ . '/../includes/header.php';
   <div class="chat-header">
     <div class="chat-avatar">AI</div>
     <div class="chat-header-info">
-      <h4>Sevi AI</h4>
+      <h4>CAI</h4>
       <div class="chat-context-badge">
         <span class="chat-context-dot"></span>
         <span id="chat-context-label"><?= h($course['nama_mk']) ?></span>
@@ -214,7 +214,7 @@ require_once __DIR__ . '/../includes/header.php';
   <div class="chat-messages" id="chat-messages">
     <div class="chat-msg ai">
       <div class="msg-bubble">
-        Halo! Saya <strong>Sevi AI</strong>, asisten belajar Anda untuk mata kuliah <strong><?= h($course['nama_mk']) ?></strong>.
+        Halo! Saya <strong>CAI</strong>, asisten belajar Anda untuk mata kuliah <strong><?= h($course['nama_mk']) ?></strong>.
         Buka salah satu minggu lalu tanyakan apa saja tentang materi tersebut!
       </div>
     </div>

@@ -119,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="auth-brand-name">C<span>AI</span></div>
       </div>
       <div class="auth-tagline">Classroom<br>Artificial Intelligence</div>
-      <p class="auth-desc">Platform pembelajaran berbasis AI untuk mendukung kegiatan perkuliahan. Didukung Sevi AI &mdash; asisten cerdas berbasis Gemini.</p>
+      <p class="auth-desc">Platform pembelajaran berbasis AI untuk mendukung kegiatan perkuliahan. Didukung CAI &mdash; asisten cerdas berbasis Gemini.</p>
       <div class="auth-features">
         <div class="auth-feature">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
         <div class="auth-feature">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <span>Sevi AI — tanya jawab materi real-time</span>
+          <span>CAI — tanya jawab materi real-time</span>
         </div>
         <div class="auth-feature">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>

@@ -84,7 +84,7 @@ require_once __DIR__ . '/../includes/header.php';
 
   <div class="page-header d-flex justify-between align-center" style="flex-wrap:wrap;gap:var(--s-3)">
     <div>
-      <h1>Validasi Jawaban Sevi AI</h1>
+      <h1>Validasi Jawaban CAI</h1>
       <p>Tinjau interaksi mahasiswa dan berikan verifikasi atau koreksi pada jawaban AI</p>
     </div>
     <a href="<?= BASE_URL ?>/api/export_pdf.php?type=validasi" target="_blank" class="btn btn-danger btn-sm no-print">
@@ -188,7 +188,7 @@ require_once __DIR__ . '/../includes/header.php';
 
     <!-- Jawaban AI -->
     <div style="margin-top:var(--s-3)">
-      <span style="color:var(--muted);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.06em">Jawaban Sevi AI</span>
+      <span style="color:var(--muted);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.06em">Jawaban CAI</span>
       <div class="chat-a mt-1"><?= h($ch['jawaban']) ?></div>
     </div>
 

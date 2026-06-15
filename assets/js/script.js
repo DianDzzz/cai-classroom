@@ -114,7 +114,7 @@ function initAccordion() {
   });
 }
 
-/* ── Chatbox (Sevi AI) ───────────────────────────────────────── */
+/* ── Chatbox (CAI) ───────────────────────────────────────── */
 let chatContext = 'Materi umum mata kuliah';
 let currentChatId = null;
 

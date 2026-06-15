@@ -1,17 +1,13 @@
 <?php
 define('BASE_URL', '/cai-classroom');
 
-// 24-hour session
-session_set_cookie_params(['lifetime' => 86400, 'path' => '/', 'httponly' => true, 'samesite' => 'Lax']);
-ini_set('session.gc_maxlifetime', 86400);
-
 class Database {
     private static $instance = null;
     private $conn;
 
     private $host = 'localhost';
-    private $user = 'root';
-    private $pass = '';
+    private $user = 'cai_user';
+    private $pass = 'caipass2024';
     private $name = 'cai_db';
 
     private function __construct() {

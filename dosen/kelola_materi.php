@@ -208,26 +208,26 @@ require_once __DIR__ . '/../includes/header.php';
   <div class="accordion">
     <?php foreach ($weeks as $w): ?>
     <div class="accordion-item" id="week-<?= $w['id'] ?>">
-      <button class="accordion-trigger" type="button">
+      <div class="accordion-trigger">
         <span class="week-num"><?= $w['minggu_ke'] ?></span>
         <span class="accordion-info">
           <span class="accordion-title"><?= h($w['judul_minggu'] ?? "Minggu {$w['minggu_ke']}") ?></span>
           <span class="accordion-sub"><?= count($w['materials']) ?> materi</span>
         </span>
-        <div class="d-flex align-center gap-1">
-          <button class="btn btn-ghost btn-sm"
-            onclick="event.stopPropagation();openEditWeek(<?= $w['id'] ?>, <?= $w['minggu_ke'] ?>, '<?= addslashes(h($w['judul_minggu'] ?? '')) ?>', '<?= addslashes(h($w['deskripsi_minggu'] ?? '')) ?>')">
+        <div class="d-flex align-center gap-1" onclick="event.stopPropagation()">
+          <button class="btn btn-ghost btn-sm" type="button"
+            onclick="openEditWeek(<?= $w['id'] ?>, <?= $w['minggu_ke'] ?>, '<?= addslashes(h($w['judul_minggu'] ?? '')) ?>', '<?= addslashes(h($w['deskripsi_minggu'] ?? '')) ?>')">
             Edit Judul
           </button>
-          <button class="btn btn-primary btn-sm"
-            onclick="event.stopPropagation();openAddForWeek(<?= $sel_course ?>, <?= $w['minggu_ke'] ?>)">
+          <button class="btn btn-primary btn-sm" type="button"
+            onclick="openAddForWeek(<?= $sel_course ?>, <?= $w['minggu_ke'] ?>)">
             + Materi
           </button>
         </div>
         <svg class="accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="9 18 15 12 9 6"/>
         </svg>
-      </button>
+      </div>
 
       <div class="accordion-body">
         <div class="accordion-content">

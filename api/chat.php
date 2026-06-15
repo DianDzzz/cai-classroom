@@ -44,7 +44,7 @@ if ($course_id && $minggu_ke) {
     }
 }
 
-$system_prompt = "Kamu adalah Sevi AI, asisten belajar cerdas untuk platform CAI (Classroom Artificial Intelligence). "
+$system_prompt = "Kamu adalah CAI, asisten belajar cerdas untuk platform CAI (Classroom Artificial Intelligence). "
     . "Tugasmu adalah membantu mahasiswa memahami materi perkuliahan dengan penjelasan yang jelas, akurat, dan ramah.\n\n"
     . "Konteks materi minggu ini:\n"
     . ($material_ctx ?: $context) . "\n\n"

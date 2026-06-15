@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sks     = (int)($_POST['sks']     ?? 0);
         $sem     = (int)($_POST['semester']?? 0);
         $ta      = trim($_POST['tahun_akademik'] ?? '');
-        $desc    = trim($_POST['description']    ?? '');
+        $desc    = trim($_POST['deskripsi']    ?? '');
 
         if (!$kode || !$nama || $sks < 1) {
             $err = 'Kode MK, Nama MK, dan SKS wajib diisi.';
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $err = 'Kode MK sudah digunakan.';
             } else {
                 $stmt = $conn->prepare(
-                    "INSERT INTO courses (dosen_id, kode_mk, nama_mk, sks, semester, tahun_akademik, description)
+                    "INSERT INTO courses (dosen_id, kode_mk, nama_mk, sks, semester, tahun_akademik, deskripsi)
                      VALUES (?,?,?,?,?,?,?)"
                 );
                 $stmt->bind_param('issiiis', $uid, $kode, $nama, $sks, $sem, $ta, $desc);
@@ -49,13 +49,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sks  = (int)($_POST['sks']    ?? 0);
         $sem  = (int)($_POST['semester']?? 0);
         $ta   = trim($_POST['tahun_akademik'] ?? '');
-        $desc = trim($_POST['description']    ?? '');
+        $desc = trim($_POST['deskripsi']    ?? '');
 
         if (!$id || !$kode || !$nama || $sks < 1) {
             $err = 'Data tidak lengkap.';
         } else {
             $stmt = $conn->prepare(
-                "UPDATE courses SET kode_mk=?, nama_mk=?, sks=?, semester=?, tahun_akademik=?, description=?
+                "UPDATE courses SET kode_mk=?, nama_mk=?, sks=?, semester=?, tahun_akademik=?, deskripsi=?
                  WHERE id=? AND dosen_id=?"
             );
             $stmt->bind_param('ssiissii', $kode, $nama, $sks, $sem, $ta, $desc, $id, $uid);
@@ -156,7 +156,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
         <div class="form-group">
           <label class="form-label">Deskripsi</label>
-          <textarea name="description" class="form-control"><?= h($edit_mk['description']) ?></textarea>
+          <textarea name="deskripsi" class="form-control"><?= h($edit_mk['deskripsi']) ?></textarea>
         </div>
         <div class="d-flex justify-end gap-2">
           <a href="<?= BASE_URL ?>/dosen/kelola_mk.php" class="btn btn-ghost">Batal</a>
@@ -184,8 +184,8 @@ require_once __DIR__ . '/../includes/header.php';
             <td class="fw-700 text-accent"><?= h($mk['kode_mk']) ?></td>
             <td>
               <div class="fw-600"><?= h($mk['nama_mk']) ?></div>
-              <?php if ($mk['description']): ?>
-                <div class="text-xs text-muted truncate" style="max-width:200px"><?= h($mk['description']) ?></div>
+              <?php if ($mk['deskripsi']): ?>
+                <div class="text-xs text-muted truncate" style="max-width:200px"><?= h($mk['deskripsi']) ?></div>
               <?php endif; ?>
             </td>
             <td><?= $mk['sks'] ?></td>
@@ -252,7 +252,7 @@ require_once __DIR__ . '/../includes/header.php';
         </div>
         <div class="form-group">
           <label class="form-label">Deskripsi <span class="text-muted">(opsional)</span></label>
-          <textarea name="description" class="form-control" placeholder="Deskripsi singkat mata kuliah..."></textarea>
+          <textarea name="deskripsi" class="form-control" placeholder="Deskripsi singkat mata kuliah..."></textarea>
         </div>
         <div class="modal-footer" style="margin:0 calc(-1*var(--s-6)) calc(-1*var(--s-6));padding:var(--s-4) var(--s-6)">
           <button type="button" onclick="Modal.close('modal-add')" class="btn btn-ghost">Batal</button>

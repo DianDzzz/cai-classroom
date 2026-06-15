@@ -105,7 +105,7 @@ CREATE TABLE progress (
 ) ENGINE=InnoDB;
 
 -- ------------------------------------------------------------
--- TABEL 7: chat_history (Riwayat Chat AI / Sevi AI)
+-- TABEL 7: chat_history (Riwayat Chat AI / CAI)
 -- Menyimpan tanya-jawab mahasiswa dengan Gemini API.
 -- feedback: thumbs up/down dari mahasiswa.
 -- is_verified & feedback_dosen: hasil validasi dosen.
@@ -211,7 +211,7 @@ INSERT INTO progress (user_id, course_id, minggu_ke, is_completed) VALUES
 (3, 2, 1, 1),
 (4, 1, 1, 1);
 
--- Riwayat Chat AI (contoh interaksi mahasiswa dengan Sevi AI)
+-- Riwayat Chat AI (contoh interaksi mahasiswa dengan CAI)
 INSERT INTO chat_history (user_id, course_id, minggu_ke, pertanyaan, jawaban, feedback, is_verified, feedback_dosen) VALUES
 (3, 1, 1,
  'Apa perbedaan antara tag <div> dan <section> di HTML5?',
