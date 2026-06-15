@@ -1,0 +1,31 @@
+# ── Blok akses ke file sensitif ────────────────────────────────
+<FilesMatch "^\.env|\.env\.example|\.gitignore|database\.sql">
+    Require all denied
+</FilesMatch>
+
+# ── Blok akses ke direktori config/ dan vendor/ ─────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Blok akses langsung ke config/ dan vendor/
+    RewriteRule ^config/     - [F,L]
+    RewriteRule ^vendor/     - [F,L]
+</IfModule>
+
+# ── Security headers ────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# ── Sembunyikan versi PHP ───────────────────────────────────────
+<IfModule mod_php.c>
+    php_flag expose_php Off
+    php_flag display_errors Off
+    php_flag log_errors On
+</IfModule>
+
+# ── Matikan directory listing ───────────────────────────────────
+Options -Indexes
