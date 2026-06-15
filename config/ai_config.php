@@ -1,11 +1,20 @@
 <?php
-// Ganti dengan API Key Gemini Anda dari https://aistudio.google.com/app/apikey
-define('AI_API_KEY', 'YOUR_GEMINI_API_KEY_HERE');
-define('AI_MODEL',   'gemini-1.5-flash');
+/* ── Load .env ─────────────────────────────────────────────── */
+$_env_file = __DIR__ . '/../.env';
+if (file_exists($_env_file)) {
+    foreach (file($_env_file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $_line) {
+        if (str_starts_with(trim($_line), '#') || !str_contains($_line, '=')) continue;
+        [$_k, $_v] = explode('=', $_line, 2);
+        $_ENV[trim($_k)] = trim($_v);
+    }
+}
+
+define('AI_API_KEY', $_ENV['GEMINI_API_KEY'] ?? '');
+define('AI_MODEL',   $_ENV['GEMINI_MODEL']   ?? 'gemini-1.5-flash');
 
 function callGeminiAPI(string $system_prompt, string $user_message): string {
-    if (!AI_API_KEY || AI_API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
-        return 'API Key Gemini belum dikonfigurasi. Isi di config/ai_config.php.';
+    if (!AI_API_KEY || AI_API_KEY === 'your_api_key_here') {
+        return 'API Key Gemini belum dikonfigurasi. Isi GEMINI_API_KEY di file .env';
     }
 
     $url  = 'https://generativelanguage.googleapis.com/v1beta/models/' . AI_MODEL

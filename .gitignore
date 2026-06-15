@@ -1,0 +1,4 @@
+.env
+uploads/*
+!uploads/.htaccess
+vendor/fpdf.php
