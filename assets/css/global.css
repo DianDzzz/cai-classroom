@@ -1,0 +1,41 @@
+:root {
+    /* Light Mode (Putih abu terang) */
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-primary: #333333; /* Gray tua */
+    --accent-purple: #4b0082; /* Ungu gelap */
+    --nav-bg: #ffffff;
+    --text-on-accent: #ffffff;
+}
+
+[data-theme='dark'] {
+    /* Dark Mode (Charcoal) */
+    --bg-color: #1e1e24;
+    --card-bg: #2a2a35;
+    --text-primary: #ffffff; /* Putih bersih */
+    --accent-purple: #6c63ff;
+    --nav-bg: #15151a;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', sans-serif; /* Modern Sans-Serif */
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--accent-purple);
+    color: var(--text-on-accent);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Grid 4 Kolom untuk Matkul */
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
