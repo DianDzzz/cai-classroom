@@ -10,7 +10,7 @@ if (file_exists($_env_file)) {
 }
 
 define('AI_API_KEY', $_ENV['GEMINI_API_KEY'] ?? '');
-define('AI_MODEL',   $_ENV['GEMINI_MODEL']   ?? 'gemini-1.5-flash');
+define('AI_MODEL',   $_ENV['GEMINI_MODEL']   ?? 'gemini-2.5-flash');
 
 function callGeminiAPI(string $system_prompt, string $user_message): string {
     if (!AI_API_KEY || AI_API_KEY === 'your_api_key_here') {
