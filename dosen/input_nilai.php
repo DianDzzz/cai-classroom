@@ -88,10 +88,10 @@ require_once __DIR__ . '/../includes/header.php';
       <h1>Input Nilai Akhir</h1>
       <p>Masukkan nilai akhir mahasiswa (A, B, C, D, E, atau F) per mata kuliah</p>
     </div>
-    <a href="<?= BASE_URL ?>/api/export_pdf.php?type=nilai" target="_blank" class="btn btn-danger btn-sm no-print">
+<button onclick="window.print()" class="btn btn-danger btn-sm no-print">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
       Export PDF Semua Nilai
-    </a>
+    </button>
   </div>
 
   <?php if ($msg): ?>

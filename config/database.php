@@ -9,7 +9,7 @@ if (file_exists($_env)) {
     }
 }
 
-define('BASE_URL', rtrim($_ENV['APP_BASE_URL'] ?? '/cai-classroom', '/'));
+define('BASE_URL', rtrim($_ENV['APP_BASE_URL'] ?? '', '/'));
 
 class Database {
     private static $instance = null;
@@ -21,10 +21,10 @@ class Database {
     private $name = 'if0_42184685_cai_db';
 
     private function __construct() {
-        $host = $_ENV['DB_HOST'] ?? 'localhost';
-        $user = $_ENV['DB_USER'] ?? 'root';
-        $pass = $_ENV['DB_PASS'] ?? '';
-        $name = $_ENV['DB_NAME'] ?? 'cai_db';
+        $host = $_ENV['DB_HOST'] ?? $this->host;
+        $user = $_ENV['DB_USER'] ?? $this->user;
+        $pass = $_ENV['DB_PASS'] ?? $this->pass;
+        $name = $_ENV['DB_NAME'] ?? $this->name;
 
         $this->conn = new mysqli($host, $user, $pass, $name);
         if ($this->conn->connect_error) {

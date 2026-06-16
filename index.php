@@ -100,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CAI &mdash; Classroom Artificial Intelligence</title>
-  <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/global.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/global.css">
   <script>const CAI_BASE = '<?= BASE_URL ?>';</script>
 </head>
 <body>
@@ -236,7 +236,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 </div>
 
-<script src="<?= BASE_URL ?>/assets/js/script.js" defer></script>
+<script src="<?= BASE_URL ?>assets/js/script.js" defer></script>
 <script>
 function updatePasswordStrength(val) {
   const fill = document.getElementById('pw-fill');
